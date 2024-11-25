@@ -170,7 +170,7 @@ public class ArrCharOps {
             if (newStr.charAt(i) < 'a' || newStr.charAt(i) > 'z')
             return -2;
         }
-        int len = (str1.length() > str2.length()) ? (str2.length()) : (str1.length());
+        int len = Math.min(str1.length(), str2.length());
         for (int i = 0; i < len; i++) {
             if (str1.charAt(i) < str2.charAt(i)) {
                 return -1;
@@ -179,6 +179,12 @@ public class ArrCharOps {
                 return 1;
             }
         }
+        // If the 2 strings are equal
+        if (str1.length() < str2.length())
+        return -1;
+        if (str1.length() > str2.length())
+        return 1;
+
         return 0;
     }
 }
