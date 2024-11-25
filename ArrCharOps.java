@@ -43,14 +43,14 @@ public class ArrCharOps {
      *  returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
-        boolean flag = true;
-        for (int i = 0; i < arr1.length; i++) {
-            for(int j = 0; j < arr2.length; j++) {
-                if (arr1[i] != arr2[j])
-                flag = false;
-            }
+        if (arr1.length != arr2.length)
+        return false;
+
+        for ( int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != arr2[i])
+            return false;
         }
-        return flag;
+        return true;
     }
 
     /** Returns the index within the given array of the first occurrence of the given character.
@@ -129,12 +129,9 @@ public class ArrCharOps {
         if (arr.length == 0)
         return 0;
         long hC = 0;
-        int j = 1;
         for (int i = 0; i < arr.length; i++) {
-            hC += arr[i]*Math.pow(7, arr.length-j);
-            j++;
+            hC += arr[i]*Math.pow(7, arr.length - i - 1);
         }
-        hC += arr[arr.length-2]*7 + arr[arr.length-1];
         return hC;
     }
 
@@ -170,7 +167,7 @@ public class ArrCharOps {
         // Checking for special characters (errors)
         String newStr = str1+str2;
         for (int i = 0; i < newStr.length(); i++) {
-            if (newStr.charAt(i) >= '{' || newStr.charAt(i) <= '`')
+            if (newStr.charAt(i) < 'a' || newStr.charAt(i) > 'z')
             return -2;
         }
         int len = (str1.length() > str2.length()) ? (str2.length()) : (str1.length());
