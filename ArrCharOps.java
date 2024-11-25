@@ -165,6 +165,8 @@ public class ArrCharOps {
         if (str1 == null && str2 == null)
         return -2;
         // Length for the for loop by finding the miniumum
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
         int len = Math.min(str1.length(), str2.length());
         for (int i = 0; i < len; i++) {
             if (str1.charAt(i) < str2.charAt(i)) {
