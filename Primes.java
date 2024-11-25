@@ -26,6 +26,6 @@ public class Primes {
             }
         }
         double primePrecentage = 100.0 * (counter / (double)N);
-        System.out.println("There are "+counter+" numbers between 2 and "+N+" ("+(int)primePrecentage+"% are primes)");
+        System.out.println("There are "+counter+" primes between 2 and "+N+" ("+(int)primePrecentage+"% are primes)");
     }
 }
