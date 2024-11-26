@@ -164,12 +164,15 @@ public class ArrCharOps {
         // Checking for null input, empty inputs
         if (str1 == null || str2 == null)
         return -2;
+        
         if (str1.isEmpty() && str2.isEmpty())
-        return 0;
+            return 0;
+    
         if (str1.isEmpty())
-        return -1;
+            return -1;
+    
         if (str2.isEmpty())
-        return 1;
+            return 1;
 
         // Length for the for loop by finding the miniumum
         int len = Math.min(str1.length(), str2.length());
