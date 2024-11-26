@@ -166,9 +166,9 @@ public class ArrCharOps {
         return -2;
         if (str1.isEmpty() && str2.isEmpty())
         return 0;
-        if (str1.isEmpty() && !str2.isEmpty())
+        if (str1.isEmpty())
         return -1;
-        if (str2.isEmpty() && !str1.isEmpty())
+        if (str2.isEmpty())
         return 1;
 
         // Length for the for loop by finding the miniumum
