@@ -46,6 +46,7 @@ public class MyString {
         for (int i = 0; i < str1.length(); i++) {
             if (str1.charAt(i) == str2.charAt(0)) {
                 i2 = i+1;
+                if (i2 + str2.length() - 1 <= str1.length()) // Out of Bounds Case Check
                 for (int j = 1; j < str2.length(); j++) {
                     if (str1.charAt(i2) != str2.charAt(j)) {
                      flag = false;
