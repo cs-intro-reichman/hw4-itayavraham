@@ -162,8 +162,10 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
         // Checking for null input, empty inputs
-        if (str1.isEmpty() && str2.isEmpty())
+        if (str1 == null || str2 == null)
         return -2;
+        if (str1.isEmpty() && str2.isEmpty())
+        return 0;
         if (str1.isEmpty() && !str2.isEmpty())
         return -1;
         if (str2.isEmpty() && !str1.isEmpty())
