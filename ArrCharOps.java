@@ -13,7 +13,7 @@ public class ArrCharOps {
         System.out.println(lastIndexOf(arr1, 'l'));
         System.out.println(concat(arr1, arr2));
         System.out.println(subArray(arr2, 2, 9));
-        System.out.println(compareTo("abcd", "abcd"));
+        System.out.println(compareTo("abc", ""));
         System.out.println(compareTo("abc", "abcd"));
         System.out.println(compareTo("abw", "abcd"));
         System.out.println(compareTo("Abcd", "a"));
@@ -164,15 +164,15 @@ public class ArrCharOps {
         // Checking for null input, empty inputs
         if (str1 == null || str2 == null)
         return -2;
-        
+
         if (str1.isEmpty() && str2.isEmpty())
             return 0;
     
         if (str1.isEmpty())
-            return -1;
+            return -2;
     
         if (str2.isEmpty())
-            return 1;
+            return -2;
 
         // Length for the for loop by finding the miniumum
         int len = Math.min(str1.length(), str2.length());
