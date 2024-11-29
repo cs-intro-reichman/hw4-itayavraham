@@ -73,11 +73,6 @@ public class ArrCharOps {
     /** Same as indexOf(char[], char), but starts the search in the given index.
      */
     public static int indexOf(char[] arr, char ch, int fromIndex) {
-        if (arr.length == 0) {
-            System.out.println("ERROR: EMPTY ARRAY. RETURNING -1");
-            return -1;
-        }
-
         for (int i = fromIndex; i < arr.length; i++) {
             if (arr[i] == ch) {
                 return i;
