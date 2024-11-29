@@ -23,6 +23,10 @@ public class KeywordsDetector {
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         // Initilaizing all string characters to lower case.
         // I am creating a copy of the arrays to not change the original values.
+        if (sentences.length == 0 || keywords.length == 0) {
+            System.out.println("ERROR: EMPTY ARRAY.");
+        }
+
         String[] sentencesCopy = new String[sentences.length];
         String[] keywordsCopy = new String[keywords.length];
         for (int i = 0; i < sentences.length; i++) {
