@@ -63,10 +63,6 @@ public class ArrCharOps {
      *  If no such character is found, returns -1.
      */
     public static int indexOf(char[] arr, char ch) {
-        if (arr.length == 0) {
-            System.out.println("ERROR: EMPTY ARRAY. RETURNING -1");
-            return -1;
-        }
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == ch)
             return i;
