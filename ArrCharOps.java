@@ -49,10 +49,6 @@ public class ArrCharOps {
      *  returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
-        if (arr1.length == 0 || arr2.length == 0) {
-            System.out.println("ERROR: EMPTY ARRAY. RETURNING FALSE");
-            return false;
-        }
         if (arr1.length != arr2.length)
         return false;
 
