@@ -114,11 +114,6 @@ public class ArrCharOps {
     /* Returns an array which is the concatanation of the two given arrays.
     */
     public static char[] concat(char[] arr1, char[] arr2) {
-        if (arr1.length == 0 || arr2.length == 0) {
-            System.out.println("ERROR: EMPTY ARRAYS. RETURNING NULL");
-            return null;
-        }
-
         char[] newArr = new char[arr1.length + arr2.length];
         int keepIndex = 0;
         for (int i = 0; i < arr1.length; i++) {
